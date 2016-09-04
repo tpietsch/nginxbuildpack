@@ -8,7 +8,7 @@ ENV_DIR=$3
 cd $BUILD_DIR
 
 curl -O http://nginx.org/download/nginx-1.11.2.tar.gz
-curl -O http://www.lua.org/ftp/lua-5.0.3.tar.gz
+wget http://www.lua.org/ftp/lua-5.0.3.tar.gz
 wget https://github.com/openresty/lua-nginx-module/archive/v0.10.6.tar.gz
 tar -zxf lua-5.0.3.tar.gz
 tar -zxf v0.10.6.tar.gz
