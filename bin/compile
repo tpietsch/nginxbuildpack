@@ -12,7 +12,7 @@ wget http://www.lua.org/ftp/lua-5.0.3.tar.gz
 wget https://github.com/openresty/lua-nginx-module/archive/v0.10.6.tar.gz
 
 tar -zxf lua-5.0.3.tar.gz
-for entry in "$BIULD_DIR/"lua-5.0.3/*
+for entry in $BIULD_DIR/lua-5.0.3/*
 do
   echo "$entry"
 done
