@@ -12,7 +12,7 @@ wget http://www.lua.org/ftp/lua-5.0.3.tar.gz
 wget https://github.com/openresty/lua-nginx-module/archive/v0.10.6.tar.gz
 
 tar -zxf lua-5.0.3.tar.gz
-for entry in lua-5.0.3/*
+for entry in "$BIULD_DIR/"lua-5.0.3/*
 do
   echo "$entry"
 done
@@ -22,12 +22,8 @@ tar --strip-components=1 -zxf nginx-1.11.2.tar.gz
 rm  nginx-1.11.2.tar.gz
 mkdir nginx
 
-export LUA_LIB=lua-5.0.3/src/lib
-echo $LUA_LIB
-export LUA_INC=lua-5.0.3/src/include
-echo $LUA_INC
-
-cat $LUA_INC
+export LUA_LIB=$BIULD_DIR/lua-5.0.3/src/lib
+export LUA_INC=$BIULD_DIR/lua-5.0.3/src/include
 
 ./configure  --prefix=/app/nginx \
          --with-ld-opt="-Wl,-rpath,$BUILD_DIR/lua-5.0.3" \
