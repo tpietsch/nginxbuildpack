@@ -6,10 +6,10 @@ cd $1
 curl -O http://nginx.org/download/nginx-1.10.1.tar.gz
 tar -zxvf nginx-1.10.1.tar.gz
 rm nginx-1.10.1.tar.gz
-cd nginx-1.10.1
-mkdir nginx
+mkdir /app/nginx-1.10.1/nginx
 mkdir /app/nginx-1.10.1/nginx/logs 
 touch /app/nginx-1.10.1/nginx/logs/error.log
+cd /app/nginx-1.10.1/nginx
 ./configure  --prefix=/app/nginx-1.10.1/nginx  
 	--sbin-path=/app/nginx-1.10.1/nginx 
     --conf-path=/app/nginx.conf
