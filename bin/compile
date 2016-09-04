@@ -17,10 +17,9 @@ rm  nginx-1.11.2.tar.gz
 mkdir nginx
 export LUAJIT_LIB=$BUILD_DIR/lua-5.1.3
 export LUAJIT_INC=$BUILD_DIR/lua-5.1.3
-./configure  
+./configure  --prefix=/app/nginx \
          --with-ld-opt="-Wl,-rpath,$BUILD_DIR/lua-5.1.3" \
          --add-module=$BUILD_DIR/0.10.6 \
-         --prefix=/app/nginx \
          --error-log-path=/app/nginx/errors.log \
           --pid-path=/app/nginx/nginx.pid \
           --sbin-path=$BUILD_DIR/nginx/sbin \
