@@ -6,9 +6,7 @@ cd $1
 curl -O http://nginx.org/download/nginx-1.10.1.tar.gz
 tar -zxvf nginx-1.10.1.tar.gz
 rm nginx-1.10.1.tar.gz
-mkdir nginx-1.10.1/nginx
-mkdir nginx-1.10.1/nginx/logs 
-touch nginx-1.10.1/nginx/logs/error.log
+mkdir nginx
 cd nginx-1.10.1
-./configure  --prefix=$1/nginx-1.10.1/nginx  --sbin-path=$1/nginx-1.10.1/nginx  --conf-path=$1/nginx.conf --pid-path=$1/nginx-1.10.1/nginx/nginx.pid
+./configure  --prefix=nginx
 make install 
