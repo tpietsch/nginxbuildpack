@@ -3,10 +3,10 @@ echo "-----&gt; haproxy-1.6.9"
 echo "-----&gt; haproxy-1.6.9"
 # change to the the BUILD_DIR ($1)
 cd $1
-curl -O http://www.haproxy.org/download/1.6/src/haproxy-1.6.9.tar.gz
-tar -zxvf haproxy-1.6.9.tar.gz
-rm haproxy-1.6.9.tar.gz
-touch haproxy.pid
-cd haproxy-1.6.9
-make TARGET=linux USE_LIBCRYPT=1 USE_CRYPT_H=1 USE_ZLIB=1 USE_OPENSSL=1 USE_PCRE=1
-
+curl -O http://nginx.org/download/nginx-1.10.1.tar.gz
+tar -zxvf nginx-1.10.1.tar.gz
+rm nginx-1.10.1.tar.gz
+cd nginx-1.10.1
+./configure
+make
+make install

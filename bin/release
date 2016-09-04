@@ -2,5 +2,5 @@
 cat &lt;&lt;EOF
 ---
 config_vars:
-PATH: $PATH:/app/haproxy-1.5.18/haproxy
+PATH: $PATH:/app/nginx-1.10.1/haproxy
 EOF

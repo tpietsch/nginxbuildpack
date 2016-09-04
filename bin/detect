@@ -1,4 +1,4 @@
-if [ -f $1/haproxy.cfg ]; then
+if [ -f $1/nginx.conf ]; then
   echo "haproxy"
   exit 0
 else
