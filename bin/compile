@@ -41,7 +41,7 @@ export LUA_LIB="$BUILD_DIR"/lua-5.0.3/src/lib
 export LUA_INC="$BUILD_DIR"/lua-5.0.3/include/
 
 ./configure  --prefix=/app/nginx \
-         --with-ld-opt="-Wl,-rpath,$BUILD_DIR/lua-5.0.3" \
+         --with-ld-opt="-Wl,-rpath,$LUAJIT_LIB" \
          --add-module=$BUILD_DIR/lua-nginx-module-0.10.6 \
          --error-log-path=/app/nginx/errors.log \
           --pid-path=/app/nginx/nginx.pid \
