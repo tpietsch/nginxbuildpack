@@ -7,6 +7,5 @@ curl -O http://nginx.org/download/nginx-1.10.1.tar.gz
 tar -zxvf nginx-1.10.1.tar.gz
 rm nginx-1.10.1.tar.gz
 cd nginx-1.10.1
-./configure
-make
-make install
+./configure  –prefix=/app/nginx-1.10.1/nginx
+make install 
