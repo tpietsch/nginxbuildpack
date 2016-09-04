@@ -22,6 +22,17 @@ tar --strip-components=1 -zxf nginx-1.11.2.tar.gz
 rm  nginx-1.11.2.tar.gz
 mkdir nginx
 
+cd "$BUILD_DIR"/LuaJIT-2.0.4
+make install
+
+cd "$BUILD_DIR"/LuaJIT-2.1.0-beta2
+make install
+
+cd "$BUILD_DIR"/lua-5.0.3/src
+make install
+
+cd "$BUILD_DIR"
+
 export LUAJIT_LIB="$BUILD_DIR"/LuaJIT-2.0.4/src
 export LUAJIT_INC="$BUILD_DIR"/LuaJIT-2.0.4/src
 export LUAJIT_LIB="$BUILD_DIR"/LuaJIT-2.1.0-beta2/src
