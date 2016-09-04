@@ -10,7 +10,7 @@ cd nginx-1.10.1
 mkdir nginx
 mkdir /app/nginx-1.10.1/nginx/logs 
 touch /app/nginx-1.10.1/nginx/logs/error.log
-./configure  --prefix=/app/nginx-1.10.1/nginx  
+./configure  
 	--sbin-path=/app/nginx-1.10.1/nginx 
     --conf-path=/app/nginx.conf
     --pid-path=/app/nginx-1.10.1/nginx/nginx.pid
