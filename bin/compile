@@ -34,5 +34,5 @@ export LUAJIT_INC="$BUILD_DIR"/nginxbuildpack-master/LuaJIT-2.0.4/src
           --pid-path=/app/nginx/nginx.pid \
           --sbin-path=$BUILD_DIR/nginx/sbin \
           --conf-path=/app/nginx.conf
-make -j2	
+	
 make install 
