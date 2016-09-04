@@ -1,0 +1,6 @@
+if [ -f $1/haproxy.cfg ]; then
+  echo "haproxy"
+  exit 0
+else
+  exit 1
+fi

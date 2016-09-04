@@ -1,1 +1,1 @@
-# nginxbuildpack
+# haproxybuildpack
