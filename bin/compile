@@ -10,6 +10,7 @@ cd $BUILD_DIR
 curl -O http://nginx.org/download/nginx-1.11.2.tar.gz
 wget https://github.com/tpietsch/nginxbuildpack/archive/master.zip
 
+
 unzip master.zip
 tar --strip-components=1 -zxf nginx-1.11.2.tar.gz
 
