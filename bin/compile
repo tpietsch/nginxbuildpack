@@ -8,31 +8,17 @@ ENV_DIR=$3
 cd $BUILD_DIR
 
 curl -O http://nginx.org/download/nginx-1.11.2.tar.gz
-wget https://github.com/tpietsch/nginxbuildpack/archive/master.zip
-wget https://github.com/openresty/lua-nginx-module/archive/v0.10.6.tar.gz
 
-unzip -q master.zip
-tar -zxf v0.10.6.tar.gz
 tar --strip-components=1 -zxf nginx-1.11.2.tar.gz
 
 rm  nginx-1.11.2.tar.gz
 mkdir nginx
 
 
-cd "$BUILD_DIR"/nginxbuildpack-master/lua-5.0.3/
-make install
-
-cd "$BUILD_DIR"
-
-export LUA_LIB="$BUILD_DIR"/lua-5.0.3/src/lib
-export LUA_INC="$BUILD_DIR"/lua-5.0.3/include/
-
 ./configure  --prefix=/app/nginx \
-         --with-ld-opt="-Wl,-rpath,$LUA_LIB" \
-         --add-module=$BUILD_DIR/lua-nginx-module-0.10.6 \
          --error-log-path=/app/nginx/errors.log \
           --pid-path=/app/nginx/nginx.pid \
           --sbin-path=$BUILD_DIR/nginx/sbin \
           --conf-path=/app/nginx.conf
-make -j2	
+	
 make install 
