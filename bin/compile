@@ -10,17 +10,21 @@ cd $BUILD_DIR
 curl -O http://nginx.org/download/nginx-1.11.2.tar.gz
 wget http://www.lua.org/ftp/lua-5.0.3.tar.gz
 wget https://github.com/openresty/lua-nginx-module/archive/v0.10.6.tar.gz
+
 tar -zxf lua-5.0.3.tar.gz
 tar -zxf v0.10.6.tar.gz
 tar --strip-components=1 -zxf nginx-1.11.2.tar.gz
+
 rm  nginx-1.11.2.tar.gz
 mkdir nginx
-cd $BUILD_DIR
+
 export LUA_LIB=$BUILD_DIR/lua-5.0.3/src/lib
 echo $LUA_LIB
 export LUA_INC=$BUILD_DIR/lua-5.0.3/src/lua.h
 echo $LUA_INC
+
 cat $LUA_INC
+
 ./configure  --prefix=/app/nginx \
          --with-ld-opt="-Wl,-rpath,$BUILD_DIR/lua-5.0.3" \
          --add-module=$BUILD_DIR/lua-nginx-module-0.10.6 \
