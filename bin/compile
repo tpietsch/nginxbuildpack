@@ -20,7 +20,7 @@ mkdir nginx
 
 export LUA_LIB=$BUILD_DIR/lua-5.0.3/src/lib
 echo $LUA_LIB
-export LUA_INC=$BUILD_DIR/lua-5.0.3/src/lua.h
+export LUA_INC=$BUILD_DIR/lua-5.0.3/src/include
 echo $LUA_INC
 
 cat $LUA_INC
