@@ -8,5 +8,9 @@ tar -zxvf nginx-1.10.1.tar.gz
 rm nginx-1.10.1.tar.gz
 cd nginx-1.10.1
 mkdir nginx
-./configure  --prefix=/app/nginx-1.10.1/nginx
+./configure  --prefix=/app/nginx-1.10.1/nginx  
+	--sbin-path=/app/nginx-1.10.1/nginx 
+    --conf-path=/app/nginx-1.10.1/nginx/nginx.conf
+    --pid-path=/app/nginx-1.10.1/nginx/nginx.pid
+    --with-http_ssl_module
 make install 
