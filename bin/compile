@@ -6,9 +6,10 @@ BUILD_DIR=$1
 CACHE_DIR=$2
 ENV_DIR=$3
 cd $BUILD_DIR
+
 curl -O http://nginx.org/download/nginx-1.10.1.tar.gz
 tar --strip-components=1 -zxvf nginx-1.10.1.tar.gz
 rm  nginx-1.10.1.tar.gz
 mkdir nginx
-./configure  --prefix=/app/nginx --error-log-path=/app/nginx/errors.log --pid-path=/app/nginx/nginx.pid --sbin-path=/app/nginx/sbin --conf-path=/app/nginx.conf
+./configure  --prefix=$BUILD_DIR/nginx --error-log-path=/app/nginx/errors.log --pid-path=/app/nginx/nginx.pid --sbin-path=/app/nginx/sbin --conf-path=/app/nginx.conf
 make install 
