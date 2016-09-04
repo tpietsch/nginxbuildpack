@@ -24,8 +24,6 @@ mkdir nginx
 
 export LUA_LIB="$BUILD_DIR"/lua-5.0.3/src/lib
 export LUA_INC="$BUILD_DIR"/lua-5.0.3/include
-cd $LUA_INC
-cat lua.h
 ./configure  --prefix=/app/nginx \
          --with-ld-opt="-Wl,-rpath,$BUILD_DIR/lua-5.0.3" \
          --add-module=$BUILD_DIR/lua-nginx-module-0.10.6 \
