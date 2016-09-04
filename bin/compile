@@ -6,5 +6,5 @@ cd $1
 curl -O http://nginx.org/download/nginx-1.10.1.tar.gz
 tar --strip-components=1 -zxvf nginx-1.10.1.tar.gz
 mkdir nginx
-./configure  --prefix=nginx
+./configure  --prefix=../nginx
 make install 
