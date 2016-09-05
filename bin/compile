@@ -16,7 +16,6 @@ mkdir nginx
 
 
 ./configure  --prefix=/app/nginx \
-			--with-http_perl_module \
          --error-log-path=/app/nginx/errors.log \
           --pid-path=/app/nginx/nginx.pid \
           --sbin-path=$BUILD_DIR/nginx/sbin \
