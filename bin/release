@@ -4,5 +4,4 @@ cat &lt;&lt;EOF
 cp -r $1/nginx .
 config_vars:
 PATH: $PATH:/app/nginx-1.10.1/nginx
-web: npm start
 EOF
